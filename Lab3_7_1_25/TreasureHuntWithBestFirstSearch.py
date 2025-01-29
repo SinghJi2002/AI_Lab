@@ -1,11 +1,9 @@
 import heapq
 
 def manhattan_distance(x, y, goal_x, goal_y):
-    """Calculate the Manhattan distance."""
     return abs(goal_x - x) + abs(goal_y - y)
 
 def best_first_search(grid, start, goal):
-    """Best-First Search to locate the treasure."""
     rows, cols = len(grid), len(grid[0])
     start_x, start_y = start
     goal_x, goal_y = goal
@@ -39,8 +37,8 @@ grid = [
     [1, 1, 1, 1]
 ]
 
-start = (0, 0)  # Starting position
-goal = (3, 3)   # Treasure location
+start = (0, 0)
+goal = (3, 3)
 
 path, nodes_explored = best_first_search(grid, start, goal)
 print("Path to Treasure:", path)
